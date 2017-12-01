@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E49269E5-A81B-4DB7-A7BB-3C26644947ED}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VirtualCamera</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__STDC_CONSTANT_MACROS;NO_DSHOW_STRSAFE;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)VirtualCamera\src\dshow\VirtualCameraFilter\BaseClasses;$(SolutionDir)VirtualCamera\src;D:\vs_project\VirtualCamera\VirtualCamera\src\dshow\VirtualCameraFilter\ipc;D:\vs_project\VirtualCamera\VirtualCamera\src\dshow\VirtualCameraFilter\VirtualCameraSource</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>strmiids.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;winmm.lib;gdi32.lib;gdiplus.lib;ksguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>__STDC_CONSTANT_MACROS;NO_DSHOW_STRSAFE;WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(SolutionDir)VirtualCamera\src\dshow\VirtualCameraFilter\BaseClasses;$(SolutionDir)VirtualCamera\src;D:\vs_project\VirtualCamera\VirtualCamera\src\dshow\VirtualCameraFilter\ipc;D:\vs_project\VirtualCamera\VirtualCamera\src\dshow\VirtualCameraFilter\VirtualCameraSource</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>strmiids.lib;uuid.lib;ole32.lib;oleaut32.lib;advapi32.lib;user32.lib;winmm.lib;gdi32.lib;gdiplus.lib;ksguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\Lib;</AdditionalLibraryDirectories>
+      <ModuleDefinitionFile>$(SolutionDir)VirtualCamera\src\dshow\VirtualCameraFilter\VirtualCameraSource\VirtualCameraSource.def</ModuleDefinitionFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\amextra.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\amfilter.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\cache.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\checkbmi.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\combase.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\cprop.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\ctlutil.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\ddmm.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\dllsetup.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\dxmperf.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\fourcc.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\measure.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\msgthrd.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\mtype.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\outputq.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\perflog.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\perfstruct.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\pstream.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\pullpin.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\refclock.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\reftime.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\renbase.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\schedule.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\seekpt.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\source.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\stdafx.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\streams.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\strmctl.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\sysclock.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\transfrm.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\transip.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\videoctl.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\vtrans.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\winctrl.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\winutil.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\wxdebug.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\wxlist.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\BaseClasses\wxutil.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\ipc\filtercommons.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\ipc\ipcbridge.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\ipc\mutex.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\ipc\waitcondition.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\colorconv.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\imgfilters.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\resources.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\vcguidef.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\virtualcamerasource.h" />
+    <ClInclude Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\virtualcamerasourcestream.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\amextra.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\amfilter.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\amvideo.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\arithutil.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\combase.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\cprop.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\ctlutil.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\ddmm.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\dllentry.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\dllsetup.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\mtype.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\outputq.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\perflog.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\pstream.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\pullpin.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\refclock.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\renbase.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\schedule.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\seekpt.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\source.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\strmctl.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\sysclock.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\transfrm.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\transip.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\videoctl.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\vtrans.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\winctrl.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\winutil.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\wxdebug.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\wxlist.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\BaseClasses\wxutil.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\ipc\ipcbridge.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\ipc\mutex.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\ipc\waitcondition.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\colorconv.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\dllmain.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\imgfilters.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\vcguidef.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\virtualcamerasource.cpp" />
+    <ClCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\virtualcamerasourcestream.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="VirtualCamera.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\dshow\VirtualCameraFilter\BaseClasses\LICENSE" />
+    <None Include="src\dshow\VirtualCameraFilter\BaseClasses\README" />
+    <None Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\VirtualCameraSource.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="src\dshow\VirtualCameraFilter\VirtualCameraSource\VirtualCameraSource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="data\pattern1.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
