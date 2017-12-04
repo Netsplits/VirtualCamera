@@ -22,7 +22,7 @@
 
 #include <initguid.h>
 
-#define FILTER_NAME L"AvKys Virtual Camera"
+#define FILTER_NAME L"Nama Virtual Camera"
 #define IPC_FILE_NAME L"Local\\AvKysVirtualCamera"
 DEFINE_GUID(CLSID_VirtualCameraSource, 0x41764b79, 0x7320, 0x5669, 0x72, 0x74, 0x75, 0x61, 0x6c, 0x43, 0x61, 0x6d);
 

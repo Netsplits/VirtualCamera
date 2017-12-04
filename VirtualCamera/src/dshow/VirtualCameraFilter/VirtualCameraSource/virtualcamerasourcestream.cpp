@@ -974,8 +974,8 @@ bool VirtualCameraSourceStream::readBitmap(LPCTSTR lpName,
         delete bitmap;
 
     // All RGB formats must be Y-mirrored.
-    if (this->m_gdiFormat != PixelFormatUndefined)
-        scaledBitmap->RotateFlip(Gdiplus::RotateNoneFlipY);
+    //if (this->m_gdiFormat != PixelFormatUndefined)
+        scaledBitmap->RotateFlip(Gdiplus::RotateNoneFlipXY);//just for nama
 
     // Copy pixel data to the buffer.
     Gdiplus::BitmapData oBitmapData;
